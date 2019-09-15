@@ -23,6 +23,7 @@ class Comment(models.Model):
     comment_content = models.CharField(max_length=200, verbose_name="comment")
     comment_user = models.CharField(max_length=50, verbose_name="Name")
     comment_date = models.DateTimeField(auto_now_add=True)
+    notes = models.TextField(verbose_name='Notes')
 
     def __str__(self):
         return self.comment_content
